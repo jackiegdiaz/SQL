@@ -1,0 +1,19 @@
+--Create a technology store database.
+
+CREATE TABLE technology (id INTEGER primary key, name TEXT, type TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO technology VALUES
+(1, 'iPad', 'mobile', 400, 1),
+(2, 'Macbook', 'computer', 1000, 4),
+(3, 'iPhone', 'mobile', 900, 2),
+(4, 'iMac', 'computer',2000, 5),
+(5, 'Apple Pencil', 'mobile', 100, 3);
+
+--display the database.
+SELECT * FROM technology;
+
+--display the database ordered by price.
+SELECT * FROM technology ORDER BY price asc;
+
+--what is the most expensive item in this database?
+SELECT MAX (price) FROM technology
